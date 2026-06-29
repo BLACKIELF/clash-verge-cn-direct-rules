@@ -1,0 +1,178 @@
+# Clash Verge Profile Enhancement Merge Template
+# Watermark: blackielovelife
+# Privacy-safe: no proxy nodes, no subscriptions, no UUIDs, no passwords.
+
+profile:
+  store-selected: true
+
+rule-providers:
+  applications:
+    type: http
+    behavior: classical
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/applications.txt"
+    path: ./ruleset/applications.yaml
+    interval: 86400
+
+  private:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/private.txt"
+    path: ./ruleset/private.yaml
+    interval: 86400
+
+  direct:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/direct.txt"
+    path: ./ruleset/direct.yaml
+    interval: 86400
+
+  apple:
+    type: http
+    behavior: domain
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/apple.txt"
+    path: ./ruleset/apple.yaml
+    interval: 86400
+
+  cncidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/cncidr.txt"
+    path: ./ruleset/cncidr.yaml
+    interval: 86400
+
+  lancidr:
+    type: http
+    behavior: ipcidr
+    url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/lancidr.txt"
+    path: ./ruleset/lancidr.yaml
+    interval: 86400
+
+prepend-rules:
+  # blackielovelife CN stable direct patch
+  # Common mainland China sites: login, API, CDN, image, video, redirect domains.
+
+  # Bilibili
+  - DOMAIN-SUFFIX,bilibili.com,DIRECT
+  - DOMAIN-SUFFIX,bilibili.net,DIRECT
+  - DOMAIN-SUFFIX,bilibili.co,DIRECT
+  - DOMAIN-SUFFIX,bilibili.tv,DIRECT
+  - DOMAIN-SUFFIX,biliapi.com,DIRECT
+  - DOMAIN-SUFFIX,biliapi.net,DIRECT
+  - DOMAIN-SUFFIX,hdslb.com,DIRECT
+  - DOMAIN-SUFFIX,hdslb.net,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.com,DIRECT
+  - DOMAIN-SUFFIX,bilivideo.cn,DIRECT
+  - DOMAIN-SUFFIX,acg.tv,DIRECT
+  - DOMAIN-SUFFIX,acgvideo.com,DIRECT
+  - DOMAIN-SUFFIX,b23.tv,DIRECT
+  - DOMAIN-SUFFIX,bilibiligame.com,DIRECT
+  - DOMAIN-SUFFIX,bilibiligame.net,DIRECT
+  - DOMAIN-SUFFIX,biliintl.com,DIRECT
+  - DOMAIN-SUFFIX,biliintl.net,DIRECT
+  - DOMAIN-SUFFIX,im9.com,DIRECT
+  - DOMAIN-KEYWORD,bilibili,DIRECT
+  - DOMAIN-KEYWORD,biliapi,DIRECT
+  - DOMAIN-KEYWORD,hdslb,DIRECT
+
+  # Xiaohongshu / Rednote
+  - DOMAIN-SUFFIX,xiaohongshu.com,DIRECT
+  - DOMAIN-SUFFIX,xiaohongshu.net,DIRECT
+  - DOMAIN-SUFFIX,xiaohongshu-mycdn.com,DIRECT
+  - DOMAIN-SUFFIX,xiaohongshulvyou.com,DIRECT
+  - DOMAIN-SUFFIX,xhscdn.com,DIRECT
+  - DOMAIN-SUFFIX,xhscdn.net,DIRECT
+  - DOMAIN-SUFFIX,xhsrcdn.com,DIRECT
+  - DOMAIN-SUFFIX,xhslink.com,DIRECT
+  - DOMAIN-SUFFIX,xhsd.com,DIRECT
+  - DOMAIN-SUFFIX,xhsd.net,DIRECT
+  - DOMAIN-SUFFIX,xhsf.com,DIRECT
+  - DOMAIN-SUFFIX,rednote.com,DIRECT
+  - DOMAIN-SUFFIX,rednotecdn.com,DIRECT
+  - DOMAIN-SUFFIX,rednote.life,DIRECT
+  - DOMAIN-KEYWORD,xiaohongshu,DIRECT
+  - DOMAIN-KEYWORD,xhscdn,DIRECT
+  - DOMAIN-KEYWORD,xhsrcdn,DIRECT
+  - DOMAIN-KEYWORD,xhslink,DIRECT
+  - DOMAIN-KEYWORD,xhsd,DIRECT
+  - DOMAIN-KEYWORD,rednote,DIRECT
+
+  # Weibo
+  - DOMAIN-SUFFIX,weibo.com,DIRECT
+  - DOMAIN-SUFFIX,weibo.cn,DIRECT
+  - DOMAIN-SUFFIX,weibocdn.com,DIRECT
+  - DOMAIN-SUFFIX,weibopay.com,DIRECT
+  - DOMAIN-SUFFIX,sina.com.cn,DIRECT
+  - DOMAIN-SUFFIX,sinaimg.cn,DIRECT
+  - DOMAIN-SUFFIX,sinaimg.com,DIRECT
+
+  # Xinpianchang
+  - DOMAIN-SUFFIX,xinpianchang.com,DIRECT
+  - DOMAIN-SUFFIX,xpccdn.com,DIRECT
+  - DOMAIN-SUFFIX,vmovier.com,DIRECT
+
+  # Baidu
+  - DOMAIN-SUFFIX,baidu.com,DIRECT
+  - DOMAIN-SUFFIX,baidu.cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com.cn,DIRECT
+  - DOMAIN-SUFFIX,baidu.com.hk,DIRECT
+  - DOMAIN-SUFFIX,baiduapp.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.com,DIRECT
+  - DOMAIN-SUFFIX,bdstatic.cc,DIRECT
+  - DOMAIN-SUFFIX,bdimg.com,DIRECT
+  - DOMAIN-SUFFIX,baidubce.com,DIRECT
+  - DOMAIN-SUFFIX,baidustatic.com,DIRECT
+  - DOMAIN-SUFFIX,baiducontent.com,DIRECT
+  - DOMAIN-SUFFIX,baidubos.com,DIRECT
+  - DOMAIN-SUFFIX,bcebos.com,DIRECT
+  - DOMAIN-SUFFIX,baidupcs.com,DIRECT
+  - DOMAIN-SUFFIX,baidupcs.net,DIRECT
+  - DOMAIN-SUFFIX,baiduyun.com,DIRECT
+  - DOMAIN-SUFFIX,baiduyuncdn.com,DIRECT
+  - DOMAIN-SUFFIX,baiduyuncdn.net,DIRECT
+  - DOMAIN-SUFFIX,baiduyundns.com,DIRECT
+  - DOMAIN-SUFFIX,baiduyundns.net,DIRECT
+  - DOMAIN-SUFFIX,hao123.com,DIRECT
+  - DOMAIN-SUFFIX,hao123.net,DIRECT
+  - DOMAIN-SUFFIX,hao123img.com,DIRECT
+  - DOMAIN-SUFFIX,tieba.com,DIRECT
+  - DOMAIN-SUFFIX,tiebaimg.com,DIRECT
+  - DOMAIN-KEYWORD,baidu,DIRECT
+
+  # Zhihu
+  - DOMAIN-SUFFIX,zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhimg.com,DIRECT
+  - DOMAIN-SUFFIX,static.zhihu.com,DIRECT
+  - DOMAIN-SUFFIX,zhstatic.zhihu.com,DIRECT
+
+  # Douyin
+  - DOMAIN-SUFFIX,douyin.com,DIRECT
+  - DOMAIN-SUFFIX,douyincdn.com,DIRECT
+  - DOMAIN-SUFFIX,douyinstatic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinpic.com,DIRECT
+  - DOMAIN-SUFFIX,douyinvod.com,DIRECT
+  - DOMAIN-SUFFIX,douyinvideo.net,DIRECT
+  - DOMAIN-SUFFIX,iesdouyin.com,DIRECT
+
+  # Other common mainland China services
+  - DOMAIN-SUFFIX,qq.com,DIRECT
+  - DOMAIN-SUFFIX,weixin.qq.com,DIRECT
+  - DOMAIN-SUFFIX,taobao.com,DIRECT
+  - DOMAIN-SUFFIX,tmall.com,DIRECT
+  - DOMAIN-SUFFIX,alicdn.com,DIRECT
+  - DOMAIN-SUFFIX,alipay.com,DIRECT
+  - DOMAIN-SUFFIX,jd.com,DIRECT
+
+  # Public rule providers
+  - RULE-SET,applications,DIRECT
+  - RULE-SET,private,DIRECT
+  - RULE-SET,direct,DIRECT
+  - RULE-SET,apple,DIRECT
+  - RULE-SET,lancidr,DIRECT
+  - RULE-SET,cncidr,DIRECT
+
+  # Fallback for China domains and China IP ranges
+  - DOMAIN-SUFFIX,cn,DIRECT
+  - GEOIP,LAN,DIRECT
+  - GEOIP,CN,DIRECT,no-resolve
+

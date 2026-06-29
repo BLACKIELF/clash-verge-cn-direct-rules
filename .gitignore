@@ -1,0 +1,8 @@
+.DS_Store
+*.bak
+*.log
+clash-verge.yaml
+*.secret*
+*.token*
+*.subscription*
+
