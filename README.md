@@ -2,6 +2,8 @@
 
 Made by **blackielovelife**.
 
+[中文说明](README.zh-CN.md)
+
 This is a privacy-safe Clash Verge / Mihomo merge template for common mainland China websites that should usually go `DIRECT`.
 
 It was created after debugging intermittent first-load failures on Xiaohongshu and Bilibili, where pages sometimes failed once and worked after refresh. The goal is to cover common login, API, CDN, image, video, and redirect domains for daily-use Chinese websites.
@@ -49,4 +51,3 @@ Only public rule providers and domain rules are included.
 ## Notes
 
 This ruleset is intentionally conservative: it only forces direct routing for domains that are strongly associated with mainland China services. If a service still fails on first load, clear browser DNS/socket cache or restart Clash Verge after applying the rules.
-
