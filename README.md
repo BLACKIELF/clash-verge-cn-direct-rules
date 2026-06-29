@@ -17,6 +17,7 @@ It was created after debugging intermittent first-load failures on Xiaohongshu a
 - Baidu
 - Zhihu
 - Douyin
+- WeChat / Weixin
 - Common China direct rules from Loyalsoldier
 - LAN and China IP direct fallback
 
