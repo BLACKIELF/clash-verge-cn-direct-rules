@@ -61,6 +61,7 @@
 
 - `clash-verge-merge-template.yaml`：完整 Clash Verge 配置增强模板。
 - `rules/cn-stable-direct-patch.yaml`：只包含国内常用网站增强直连规则，适合合并到已有配置。
+- `COLLABORATION_RULES.zh-CN.md`：通用协作习惯和更新规则。
 - `README.md`：英文说明。
 - `README.zh-CN.md`：中文说明。
 

@@ -2,6 +2,10 @@
 # Watermark: blackielovelife
 # Paste under `prepend-rules:` in Clash Verge merge settings.
 
+# App licenses that must not use VPN/proxy
+- DOMAIN,co.videovillage.filmbox3ofx,DIRECT
+- DOMAIN,license.videovillage.com,DIRECT
+
 # Bilibili
 - DOMAIN-SUFFIX,bilibili.com,DIRECT
 - DOMAIN-SUFFIX,bilibili.net,DIRECT

@@ -4,6 +4,8 @@
 # Internal edition adds broader China/LAN fallback rules.
 
 # Include the public stable direct rules
+DOMAIN,co.videovillage.filmbox3ofx,DIRECT
+DOMAIN,license.videovillage.com,DIRECT
 DOMAIN-SUFFIX,bilibili.com,DIRECT
 DOMAIN-SUFFIX,bilibili.net,DIRECT
 DOMAIN-SUFFIX,bilibili.co,DIRECT
@@ -125,4 +127,3 @@ IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
 IP-CIDR6,fc00::/7,DIRECT,no-resolve
 IP-CIDR6,fe80::/10,DIRECT,no-resolve
 GEOIP,CN,DIRECT
-
